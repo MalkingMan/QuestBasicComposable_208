@@ -14,6 +14,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.unit.dp
+
 
 @Composable
 fun TataletakColumn(modifier: Modifier = Modifier) {
@@ -103,74 +108,101 @@ fun TataletakRowColumn(modifier: Modifier = Modifier) {
 
 @Composable
 fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
-    val logo = painterResource(id = R.drawable.notasibalok) // logo UMY
-    val foto = painterResource(id = R.drawable.foto) // nanti kamu tambahkan foto ke drawable
+    val logo = painterResource(id = R.drawable.notasibalok)
+    val foto = painterResource(id = R.drawable.foto)
 
-    Column(
+    Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+            .background(Color.White)
     ) {
-
-        // Bagian judul
-        Text(
-            text = "Login",
-            fontSize = 32.sp,
-            fontWeight = FontWeight.Bold
-        )
-
-        Text(
-            text = "Ini adalah halaman login",
-            fontSize = 16.sp,
-            color = Color.Gray
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        // Logo UMY
-        Image(
-            painter = logo,
-            contentDescription = "Logo UMY",
-            modifier = Modifier.size(150.dp),
-            contentScale = ContentScale.Fit
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        // Label dan nama
-        Text(
-            text = "Nama",
-            color = Color.Red,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold
-        )
-
-        Text(
-            text = "Pascal Patrick Setia",
-            color = Color.Blue,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Medium
-        )
-
-        Text(
-            text = "20190140105",
-            color = Color.Black,
-            fontSize = 22.sp,
-            fontWeight = FontWeight.Bold
-        )
-
-        Spacer(modifier = Modifier.height(30.dp))
-
-        // Foto profil
-        Image(
-            painter = foto,
-            contentDescription = "Foto Profil",
+        // Konten utama
+        Column(
             modifier = Modifier
-                .size(200.dp)
-                .background(Color.LightGray),
-            contentScale = ContentScale.Crop
-        )
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+
+            // Judul dan subjudul
+            Text(
+                text = "Login",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.SansSerif
+            )
+
+            Text(
+                text = "Ini adalah halaman login",
+                fontSize = 16.sp,
+                color = Color.Gray
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Logo universitas
+            Image(
+                painter = logo,
+                contentDescription = "Logo UMY",
+                modifier = Modifier.size(150.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Nama dan NIM
+            Text(
+                text = "Nama",
+                color = Color.Red,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+            Text(
+                text = "Pascal Patrick Setia",
+                color = Color.Blue,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Medium
+            )
+
+            Text(
+                text = "20190140105",
+                color = Color.Black,
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+            Spacer(modifier = Modifier.height(30.dp))
+
+            // Foto profil dengan efek melengkung di bawah
+            Image(
+                painter = foto,
+                contentDescription = "Foto Profil",
+                modifier = Modifier
+                    .size(230.dp)
+                    .clip(RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp, bottomEnd = 100.dp, bottomStart = 100.dp))
+                    .background(Color.LightGray),
+                contentScale = ContentScale.Crop
+            )
+
+        }
+
+        // Tombol hijau kanan bawah
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(24.dp)
+                .size(55.dp)
+                .background(color = Color(0xFF00C853), shape = androidx.compose.foundation.shape.CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "↻",
+                color = Color.White,
+                fontSize = 28.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
