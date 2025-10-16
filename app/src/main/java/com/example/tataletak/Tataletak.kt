@@ -151,7 +151,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 painter = logo,
                 contentDescription = "Logo UMY",
                 modifier = Modifier
-                    .size(150.dp)
+                    .size(300.dp)
                     .shadow(8.dp, shape = CircleShape) // Tambah bayangan lembut
                     .clip(CircleShape) ,                // Pastikan tetap berbentuk bulat
 
