@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.foundation.shape.CircleShape
 
 
@@ -151,7 +152,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 painter = logo,
                 contentDescription = "Logo UMY",
                 modifier = Modifier
-                    .size(300.dp)
+                    .size(200.dp)
                     .shadow(8.dp, shape = CircleShape) // Tambah bayangan lembut
                     .clip(CircleShape) ,                // Pastikan tetap berbentuk bulat
 
@@ -177,11 +178,16 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
             )
 
             Text(
-                text = "20230140208",
-                color = Color.Black,
+                text = "20190140105",
                 fontSize = 22.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                style = TextStyle(
+                    brush = Brush.linearGradient(
+                        colors = listOf(Color(0xFF000000), Color(0xFF00C853))
+                    )
+                )
             )
+
 
             Spacer(modifier = Modifier.height(30.dp))
 
