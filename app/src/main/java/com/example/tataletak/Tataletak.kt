@@ -177,7 +177,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
             )
 
             Text(
-                text = "20190140105",
+                text = "20230140208",
                 color = Color.Black,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold
