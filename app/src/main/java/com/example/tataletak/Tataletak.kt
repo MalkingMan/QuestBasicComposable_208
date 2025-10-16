@@ -103,41 +103,74 @@ fun TataletakRowColumn(modifier: Modifier = Modifier) {
 
 @Composable
 fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
-    val gambar = painterResource(id = R.drawable.notasibalok)
+    val logo = painterResource(id = R.drawable.notasibalok) // logo UMY
+    val foto = painterResource(id = R.drawable.foto) // nanti kamu tambahkan foto ke drawable
 
-    Column {
-        Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(110.dp)
-                .background(color = Color.Yellow),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(text = "Header Area", color = Color.Black)
-        }
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
 
-        Spacer(modifier = Modifier.height(10.dp))
+        // Bagian judul
+        Text(
+            text = "Login",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold
+        )
 
-        Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(300.dp)
-                .background(color = Color.Cyan),
-            contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = gambar,
-                contentDescription = "Gambar Notasi Balok",
-                contentScale = ContentScale.Fit
-            )
-            Text(
-                text = "My Music",
-                fontSize = 40.sp,
-                color = Color.Red,
-                fontWeight = FontWeight.Bold,
-                fontFamily = FontFamily.Cursive,
-                modifier = Modifier.align(Alignment.Center)
-            )
-        }
+        Text(
+            text = "Ini adalah halaman login",
+            fontSize = 16.sp,
+            color = Color.Gray
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // Logo UMY
+        Image(
+            painter = logo,
+            contentDescription = "Logo UMY",
+            modifier = Modifier.size(150.dp),
+            contentScale = ContentScale.Fit
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // Label dan nama
+        Text(
+            text = "Nama",
+            color = Color.Red,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Text(
+            text = "Pascal Patrick Setia",
+            color = Color.Blue,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Medium
+        )
+
+        Text(
+            text = "20190140105",
+            color = Color.Black,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Spacer(modifier = Modifier.height(30.dp))
+
+        // Foto profil
+        Image(
+            painter = foto,
+            contentDescription = "Foto Profil",
+            modifier = Modifier
+                .size(200.dp)
+                .background(Color.LightGray),
+            contentScale = ContentScale.Crop
+        )
     }
 }
