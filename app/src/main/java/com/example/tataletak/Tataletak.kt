@@ -24,6 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.foundation.shape.CircleShape
 
 
+val textPrimary = Color(0xFF212121)
 
 @Composable
 fun TataletakColumn(modifier: Modifier = Modifier) {
@@ -172,9 +173,9 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
 
             Text(
                 text = "Muhammad Array Al-khozini",
-                color = Color.Blue,
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Medium
+                color = textPrimary,
+                fontSize = 20.sp, // Sedikit lebih besar
+                fontWeight = FontWeight.Bold // Dibuat tebal
             )
 
             Text(
