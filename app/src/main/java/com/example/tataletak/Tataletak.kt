@@ -143,7 +143,8 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 color = Color.Gray
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(10.dp)) // jarak di atas logo
+
 
             // Logo universitas
             Image(
@@ -157,7 +158,8 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                         contentScale = ContentScale.Fit
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(10.dp)) // jarak di atas logo
+
 
             // Nama dan NIM
             Text(
