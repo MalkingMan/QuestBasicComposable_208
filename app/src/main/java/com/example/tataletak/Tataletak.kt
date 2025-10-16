@@ -175,16 +175,16 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(30.dp))
 
-            // Foto profil dengan efek melengkung di bawah
             Image(
                 painter = foto,
                 contentDescription = "Foto Profil",
                 modifier = Modifier
                     .size(230.dp)
-                    .clip(RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp, bottomEnd = 100.dp, bottomStart = 100.dp))
+                    .clip(androidx.compose.foundation.shape.CircleShape)
                     .background(Color.LightGray),
                 contentScale = ContentScale.Crop
             )
+
 
         }
 
