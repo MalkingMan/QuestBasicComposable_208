@@ -160,7 +160,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
             )
 
             Text(
-                text = "Pascal Patrick Setia",
+                text = "Muhammad Array Al-khozini",
                 color = Color.Blue,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium
