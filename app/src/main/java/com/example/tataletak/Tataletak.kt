@@ -15,9 +15,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.draw.shadow
+import androidx.compose.foundation.shape.CircleShape
+
 
 
 @Composable
@@ -145,8 +149,12 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
             Image(
                 painter = logo,
                 contentDescription = "Logo UMY",
-                modifier = Modifier.size(150.dp),
-                contentScale = ContentScale.Fit
+                modifier = Modifier
+                    .size(150.dp)
+                    .shadow(8.dp, shape = CircleShape) // Tambah bayangan lembut
+                    .clip(CircleShape) ,                // Pastikan tetap berbentuk bulat
+
+                        contentScale = ContentScale.Fit
             )
 
             Spacer(modifier = Modifier.height(20.dp))
