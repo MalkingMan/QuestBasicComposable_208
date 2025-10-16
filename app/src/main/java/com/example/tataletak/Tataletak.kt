@@ -22,7 +22,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.foundation.shape.CircleShape
-
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.Icon
 
 val textPrimary = Color(0xFF212121)
 val textSecondary = Color(0xFF757575)
@@ -155,8 +157,8 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 contentDescription = "Logo UMY",
                 modifier = Modifier
                     .size(200.dp)
-                    .shadow(8.dp, shape = CircleShape) // Tambah bayangan lembut
-                    .clip(CircleShape) ,                // Pastikan tetap berbentuk bulat
+                    .shadow(8.dp, shape = CircleShape)
+                    .clip(CircleShape) ,
 
                         contentScale = ContentScale.Fit
             )
@@ -203,7 +205,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
 
         }
 
-        // Tombol hijau kanan bawah
+
         Box(
             modifier = Modifier
                 .align(Alignment.BottomEnd)
@@ -212,11 +214,11 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 .background(color = Color(0xFF00C853), shape = androidx.compose.foundation.shape.CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "↻",
-                color = Color.White,
-                fontSize = 28.sp,
-                fontWeight = FontWeight.Bold
+            Icon(
+                imageVector = Icons.Default.Refresh, // Ikon refresh standar
+                contentDescription = "Refresh Button", // Deskripsi untuk aksesibilitas
+                tint = Color.White, // Warna ikon
+                modifier = Modifier.size(30.dp) // Ukuran ikon di dalam tombol
             )
         }
     }
