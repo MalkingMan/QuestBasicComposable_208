@@ -25,6 +25,7 @@ import androidx.compose.foundation.shape.CircleShape
 
 
 val textPrimary = Color(0xFF212121)
+val textSecondary = Color(0xFF757575)
 
 @Composable
 fun TataletakColumn(modifier: Modifier = Modifier) {
@@ -179,15 +180,12 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
             )
 
             Text(
-                text = "20190140105",
-                fontSize = 22.sp,
-                fontWeight = FontWeight.Bold,
-                style = TextStyle(
-                    brush = Brush.linearGradient(
-                        colors = listOf(Color(0xFF000000), Color(0xFF00C853))
-                    )
-                )
+                text = "20230140208",
+                color = textSecondary,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Medium
             )
+
 
 
             Spacer(modifier = Modifier.height(30.dp))
